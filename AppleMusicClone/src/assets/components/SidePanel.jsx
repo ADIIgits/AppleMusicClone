@@ -17,11 +17,11 @@ function SidePanel() {
         </button>
         <button className="section h-8 w-full hover:bg-white/10 rounded-lg px-5 flex items-center text-white my-1 text-sm">
             <img src="/icons/gridred.png" alt="" className='h-5 w-5 m-1'/>
-            Home
+            New
         </button>
         <button className="section h-8 w-full hover:bg-white/10 rounded-lg px-5 flex items-center text-white my-1 text-sm">
             <img src="/icons/radioicon.png" alt="" className='h-5 w-5 m-1'/>
-            Home
+            Radio
         </button>
 
         {/* sec2 */}
@@ -51,15 +51,15 @@ function SidePanel() {
         <h4 className="categories text-xs text-gray-400 mt-3 mb-1 mx-0.5">Playlist</h4>
         <button className="section h-8 w-full hover:bg-white/10 rounded-lg px-5 flex items-center text-white my-1 text-sm">
             <img src="/icons/playlisticon.png" alt="" className='h-5 w-5 m-1'/>
-            Home
+            Cassete
         </button>
         <button className="section h-8 w-full hover:bg-white/10 rounded-lg px-5 flex items-center text-white my-1 text-sm">
             <img src="/icons/playlisticon.png" alt="" className='h-5 w-5 m-1'/>
-            Home
+            Calm Piano
         </button>
         <button className="section h-8 w-full hover:bg-white/10 rounded-lg px-5 flex items-center text-white my-1 text-sm">
             <img src="/icons/playlisticon.png" alt="" className='h-5 w-5 m-1'/>
-            Home
+            Bollywood Hits
         </button>
 
         

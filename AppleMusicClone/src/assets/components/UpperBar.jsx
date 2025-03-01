@@ -1,23 +1,35 @@
-import React from 'react'
+import React, { use } from 'react'
+import { useState } from 'react'
 
 function UpperBar() {
+    const [isPlaying,setIsPlaying] = useState(false);
+    const [isShuffle,setIsShuffle] = useState(false);
+    const [isRepeat,setIsRepeat] = useState(false);
+    const [isLiked,setIsLiked] = useState(false);
+    const [isHovered,setIsHovered] = useState(false);
   return (
     <div className='h-full w-full flex p-1'>
         <div className="playbackButtons h-full w-[25%] p-3 flex justify-center items-center">
             <button className='h-full w-9  m-0.5 hover:bg-white/5 rounded-md'>
-                <img src="/icons/shufflegray.png" alt="" className='h-[65%] w-[65%] place-self-center rounded-lg'/>
+                <img src={isShuffle?"/icons/shuffleorange.png":"/icons/shufflegray.png"} alt="" className='h-[65%] w-[65%] place-self-center rounded-lg'
+                onClick={()=>setIsShuffle(!isShuffle)}
+                />
             </button>
             <button className='h-full w-10 m-0.5 hover:bg-white/5 rounded-md px-0.5'>
                 <img src="/icons/backwardicon.png" alt="" className='h-full w-full rounded-lg'/>
             </button>
             <button className='h-full w-10 m-0.5 hover:bg-white/5 rounded-md px-0.5'>
-                <img src="/icons/pauseicon.png" alt="" className='h-full w-full rounded-lg'/>
+                <img src={isPlaying?"icons/pauseicon.png":"icons/playicon.png"} alt="" className='h-full w-full rounded-lg'
+                onClick={()=>setIsPlaying(!isPlaying)}
+                />
             </button>
             <button className='h-full w-10 m-0.5 hover:bg-white/5 rounded-md px-0.5'>
                 <img src="/icons/forwardicon.png" alt="" className='h-full w-full rounded-lg'/>
             </button>
             <button className='h-full w-9 m-0.5 hover:bg-white/5 rounded-md'>
-                <img src="/icons/repeatgray.png" alt="" className='h-[65%] w-[65%] place-self-center rounded-lg'/>
+                <img src={isRepeat?"/icons/repeatorange.png":" /icons/repeatgray.png"} alt="" className='h-[65%] w-[65%] place-self-center rounded-lg'
+                onClick={()=>setIsRepeat(!isRepeat)}
+                />
             </button>
         </div>
 
@@ -30,7 +42,13 @@ function UpperBar() {
                 <div className="titleline flex items-center justify-between h-1/2 w-full p-1">
                     <img src="/icons/lossless.png" alt="" className='h-4 w-4'/>
                     <h1 className="title text-sm text-center items-center text-white/80">Song Name</h1>
-                    <img src="/icons/stargray.png" alt="" className='h-4 w-4'/>
+                    <img src={isLiked?"/icons/starfullorange.png":
+                    isHovered?"/icons/starorange.png":"/icons/stargray.png"} alt="" className='h-4 w-4' 
+                    onClick={()=>setIsLiked(!isLiked)}
+                    onMouseEnter={()=>setIsHovered(true)}
+                    onMouseLeave={()=>setIsHovered(false)}
+                    
+                    />
                     
                 </div>
 
