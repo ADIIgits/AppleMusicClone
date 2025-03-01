@@ -14,7 +14,7 @@ function App() {
             <SidePanel/>
       </div>
       <div className="mainpage bg-[#262626] rounded-r-lg overflow-scroll">
-        <div className="upperbar h-15 w-full backdrop-blur-2xl bg-black/20 rounded-r-lg sticky top-0">
+        <div className="upperbar h-15 w-full backdrop-blur-2xl bg-black/20 rounded-r-lg sticky top-0 z-100">
               <UpperBar/>
         </div>
 
