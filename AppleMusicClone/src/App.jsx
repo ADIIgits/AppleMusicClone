@@ -8,7 +8,7 @@ import HomePage from './assets/components/HomePage'
 import newPage from './assets/components/NewPage'
 function App() {
   
-  const [CurrentPage,setcurrentPage]=useState(HomePage);
+  const [CurrentPage,setcurrentPage]=useState(()=>HomePage);
   const images = ["/images/wallp1.jpg","/images/wallp2.jpg","/images/wallp3.jpg","/images/wallp4.jpg","/images/wallp4.jpg","/images/wallp5.jpg","/images/wallp6.jpg",
   "/images/wallp7.jpg","/images/wallp8.jpg","/images/wallp9.jpg","/images/wallp10.jpg"];
   function randomer()
@@ -26,7 +26,7 @@ function App() {
               <UpperBar randomer={randomer} images={images}/>
         </div>
         {console.log("CurrentPage:",CurrentPage)}
-        {CurrentPage || <CurrentPage/>}
+        <CurrentPage images={images} randomer={randomer}/>
         
         {/* {CurrentPage && React.createElement(CurrentPage)} */}
         {/* <HomePage/> */}

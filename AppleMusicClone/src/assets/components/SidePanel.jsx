@@ -14,7 +14,7 @@ function SidePanel({CurrentPage,setcurrentPage}) {
         {/* sec1 */}
         <h4 className="categories text-xs text-gray-400 mt-3 mb-1 mx-0.5">Apple Music</h4>
         <button className="section h-8 w-full hover:bg-white/10 rounded-lg px-5 flex items-center text-white my-1 text-sm"
-        onClick={()=>setcurrentPage(HomePage)}
+        onClick={()=>setcurrentPage(()=>HomePage)}
         >
             <img src="/icons/homered2.png" alt="" className='h-5 w-5 m-1'
             
@@ -22,7 +22,7 @@ function SidePanel({CurrentPage,setcurrentPage}) {
             Home
         </button>
         <button className="section h-8 w-full hover:bg-white/10 rounded-lg px-5 flex items-center text-white my-1 text-sm"
-        onClick={()=>setcurrentPage(NewPage)}
+        onClick={()=>setcurrentPage(()=>NewPage)}
         >
             <img src="/icons/gridred.png" alt="" className='h-5 w-5 m-1'/>
             New

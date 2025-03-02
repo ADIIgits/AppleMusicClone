@@ -2,7 +2,6 @@ import React, { use } from 'react'
 import { useState } from 'react'
 
 function UpperBar({randomer,images}) {
-    console.log(images[0]);
     const [isPlaying,setIsPlaying] = useState(false);
     const [isShuffle,setIsShuffle] = useState(false);
     const [isRepeat,setIsRepeat] = useState(false);
