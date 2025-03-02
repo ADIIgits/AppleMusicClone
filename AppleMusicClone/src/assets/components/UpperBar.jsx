@@ -1,7 +1,8 @@
 import React, { use } from 'react'
 import { useState } from 'react'
 
-function UpperBar() {
+function UpperBar({randomer,images}) {
+    console.log(images[0]);
     const [isPlaying,setIsPlaying] = useState(false);
     const [isShuffle,setIsShuffle] = useState(false);
     const [isRepeat,setIsRepeat] = useState(false);
@@ -9,24 +10,24 @@ function UpperBar() {
     const [isHovered,setIsHovered] = useState(false);
   return (
     <div className='h-full w-full flex p-1'>
-        <div className="playbackButtons h-full w-[25%] p-3 flex justify-center items-center">
-            <button className='h-full w-9  m-0.5 hover:bg-white/5 rounded-md'>
+        <div className="playbackButtons h-full w-[25%] p-2 flex justify-center items-center">
+            <button className='h-full w-7   hover:bg-white/5 rounded-md'>
                 <img src={isShuffle?"/icons/shuffleorange.png":"/icons/shufflegray.png"} alt="" className='h-[65%] w-[65%] place-self-center rounded-lg'
                 onClick={()=>setIsShuffle(!isShuffle)}
                 />
             </button>
-            <button className='h-full w-10 m-0.5 hover:bg-white/5 rounded-md px-0.5'>
-                <img src="/icons/backwardicon.png" alt="" className='h-full w-full rounded-lg'/>
+            <button className='h-full w-10 m-0.5 hover:bg-white/5 rounded-md px-0.5 flex justify-center items-center'>
+                <img src="/icons/backwardgrayicon.png" alt="" className='h-auto w-[70%] rounded-lg'/>
             </button>
-            <button className='h-full w-10 m-0.5 hover:bg-white/5 rounded-md px-0.5'>
-                <img src={isPlaying?"icons/pauseicon.png":"icons/playicon.png"} alt="" className='h-full w-full rounded-lg'
+            <button className='h-full w-10 m-0.5 hover:bg-white/5 rounded-md px-0.5 flex justify-center items-center'>
+                <img src={isPlaying?"icons/pausegrayicon.png":"icons/playgrayicon.png"} alt="" className='h-auto w-[70%] rounded-lg'
                 onClick={()=>setIsPlaying(!isPlaying)}
                 />
             </button>
-            <button className='h-full w-10 m-0.5 hover:bg-white/5 rounded-md px-0.5'>
-                <img src="/icons/forwardicon.png" alt="" className='h-full w-full rounded-lg'/>
+            <button className='h-full w-10 m-0.5 hover:bg-white/5 rounded-md px-0.5 flex justify-center items-center'>
+                <img src="/icons/forwardgrayicon.png" alt="" className='h-auto w-[70%] rounded-lg'/>
             </button>
-            <button className='h-full w-9 m-0.5 hover:bg-white/5 rounded-md'>
+            <button className='h-full w-7 hover:bg-white/5 rounded-md'>
                 <img src={isRepeat?"/icons/repeatorange.png":" /icons/repeatgray.png"} alt="" className='h-[65%] w-[65%] place-self-center rounded-lg'
                 onClick={()=>setIsRepeat(!isRepeat)}
                 />
@@ -35,7 +36,7 @@ function UpperBar() {
 
         <div className="currentPlaying h-full w-[45%] flex justify-center">
             <div className="albumcover h-full w-20 rounded-l-xs">
-                <img src="/makima.jpg" alt="" className='h-full w-full rounded-l-xs'/>
+                <img src={images[randomer()]} alt="" className='h-full w-full rounded-l-xs'/>
             </div>
             
             <div className='h-full w-full flex items-center flex-col bg-white/20 rounded-r-xs'>

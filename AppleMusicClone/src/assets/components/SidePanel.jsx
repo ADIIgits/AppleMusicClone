@@ -1,7 +1,9 @@
 import React from 'react'
 // import searchlogo from '../public/check-mark.png'
 import viteLogo from '/vite.svg'
-function SidePanel() {
+import HomePage from './HomePage'
+import NewPage from './NewPage'
+function SidePanel({CurrentPage,setcurrentPage}) {
   return (
     <div className='h-full w-full backdrop-blur-3xl bg-black/30 p-3 rounded-l-lg'>
         <div className="search h-8 w-full border border-white/20 bg-white/10 rounded-lg flex items-center">
@@ -11,11 +13,17 @@ function SidePanel() {
         </div>
         {/* sec1 */}
         <h4 className="categories text-xs text-gray-400 mt-3 mb-1 mx-0.5">Apple Music</h4>
-        <button className="section h-8 w-full hover:bg-white/10 rounded-lg px-5 flex items-center text-white my-1 text-sm">
-            <img src="/icons/homered2.png" alt="" className='h-5 w-5 m-1'/>
+        <button className="section h-8 w-full hover:bg-white/10 rounded-lg px-5 flex items-center text-white my-1 text-sm"
+        onClick={()=>setcurrentPage(HomePage)}
+        >
+            <img src="/icons/homered2.png" alt="" className='h-5 w-5 m-1'
+            
+            />
             Home
         </button>
-        <button className="section h-8 w-full hover:bg-white/10 rounded-lg px-5 flex items-center text-white my-1 text-sm">
+        <button className="section h-8 w-full hover:bg-white/10 rounded-lg px-5 flex items-center text-white my-1 text-sm"
+        onClick={()=>setcurrentPage(NewPage)}
+        >
             <img src="/icons/gridred.png" alt="" className='h-5 w-5 m-1'/>
             New
         </button>
