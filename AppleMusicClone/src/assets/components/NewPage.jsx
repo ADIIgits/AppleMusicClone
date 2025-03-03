@@ -10,7 +10,7 @@ function NewPage({randomer,images}) {
   for (let i = 0; i < 10; i++) {
     NewReleaseSongs.push(
     <div className="playlistCards h-55 w-45 m-2 rounded-2xl flex  flex-col items-center">
-      <img src={images[randomer()]} alt="" className='rounded-2xl h-46 w-46' />
+      <img src={images[randomer()]} alt="" className='rounded-2xl h-46 w-46 object-cover' />
       <h3 className="playlistname text-white/80 my-0.5">Playlist Name</h3>
       <h3 className="playlistname  text-white/50 text-xs">Artist Name</h3>
     </div>
@@ -22,7 +22,7 @@ function NewPage({randomer,images}) {
     LatestSongs.push(
       <div className="songinlinecard relative h-15 flex items-center border-t border-b border-b-white/10 border-t-white/10 p-3 w-1/2">
             <div className="imgcontainer h-10 w-10">
-              <img src={images[randomer()]} alt="" className='h-full w-full rounded-sm bg-indigo-600' />
+              <img src={images[randomer()]} alt="" className='h-full w-full rounded-sm object-cover' />
             </div>
             <div className="flex flex-col mx-3">
               <h3 className="songname text-sm text-white/80">Song Name</h3>

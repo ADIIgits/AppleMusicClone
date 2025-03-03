@@ -24,7 +24,7 @@ function HomePage({randomer,images}) {
         RecentlyPlayedPlaylist.push(
             <div className="flex">
                 <div className="playlistCards h-55 w-45 m-2 rounded-2xl flex flex-col items-center">
-                    <img src={images[randomer()]} alt="" className='rounded-2xl h-46 w-46' />
+                    <img src={images[randomer()]} alt="" className='rounded-2xl h-46 w-46 object-cover' />
                     <h3 className="playlistname text-white/80 my-0.5">Playlist Name</h3>
                     <h3 className="playlistname  text-white/50 text-xs">Artist Name</h3>
                 </div>
