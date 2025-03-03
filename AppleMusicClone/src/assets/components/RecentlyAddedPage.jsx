@@ -16,16 +16,16 @@ function RecentlyAddedPage({randomer,images}) {
         
     }
   return (
-    <div className='h-auto w-full bg-black/10 p-10 flex flex-col overflow-y-scroll overflow-x-clip'>
-        <h2 className='w-full  mx-3 text-center text-white bg-black/10 text-lg font-bold mb-3 p-3'>Recently Added</h2>
-        <h2 className='w-full text-white text-lg font-bold mb-3 mx-3'>Today</h2>
+    <div className='h-auto w-full bg-black/10  flex flex-col overflow-y-auto overflow-x-clip relative'>
+        <h2 className='w-full text-center text-white bg-black/10 backdrop-blur-2xl sticky top-0 z-10 text-lg font-bold mb-3 p-3'>Recently Added</h2>
+        <h2 className='w-full text-white text-lg font-bold mb-3 mx-10'>Today</h2>
 
-        <div className="topresflex flex flex-wrap m-1">
+        <div className="topresflex flex flex-wrap mx-8">
             {recentlyAdded}
         </div>
-        <h2 className='w-full text-white text-lg font-bold mb-3 mx-3'>Yesterday</h2>
+        <h2 className='w-full text-white text-lg font-bold mb-3 mx-10'>Yesterday</h2>
 
-        <div className="topresflex flex flex-wrap m-1">
+        <div className="topresflex flex flex-wrap mx-8">
             {recentlyAdded}
         </div>
     </div>
